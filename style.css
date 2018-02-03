@@ -16,7 +16,7 @@ html, body {
   width: 30px;
   position: relative;
   top: -2px;
-  background: url("icons.png") 139px 68px;
+  background: url("images/icons.png") 139px 68px;
   opacity: 0.5;
 }
 #notifications:hover {
@@ -29,7 +29,7 @@ html, body {
   height: 30px;
   position: relative;
   top: 0px;
-  background: url('icons.png') 397px 98px;
+  background: url('images/icons.png') 397px 98px;
   opacity: 0.5;
 }
 #otherApps:hover {
@@ -76,57 +76,57 @@ html, body {
 #myAccImg {
   width: 64px;
   height: 64px;
-  background: url("apps.png") 64px 1995px;
+  background: url("images/apps.png") 64px 1995px;
 }
 #searchImg {
   width: 64px;
   height: 64px;
-  background: url("apps.png") 64px 1857px;
+  background: url("images/apps.png") 64px 1857px;
 }
 #maps {
   width: 64px;
   height: 64px;
-  background: url("apps.png") 64px 755px;
+  background: url("images/apps.png") 64px 755px;
 }
 #youTube {
   width: 64px;
   height: 64px;
-  background: url("apps.png") 64px 205px;
+  background: url("images/apps.png") 64px 205px;
 }
 #play {
   width: 64px;
   height: 64px;
-  background: url("apps.png") 64px 64px;
+  background: url("images/apps.png") 64px 64px;
 }
 #gmail {
   width: 64px;
   height: 64px;
-  background: url("apps.png") 64px 2135px;
+  background: url("images/apps.png") 64px 2135px;
 }
 #drive {
   width: 64px;
   height: 64px;
-  background: url("apps.png") 64px 478px;
+  background: url("images/apps.png") 64px 478px;
 }
 #calendar {
   width: 64px;
   height: 64px;
-  background: url("apps.png") 64px 1720px;
+  background: url("images/apps.png") 64px 1720px;
 }
 #plus {
   width: 64px;
   height: 64px;
-  background: url("apps.png") 64px 1930px;
+  background: url("images/apps.png") 64px 1930px;
 }
 #translate {
   width: 64px;
   height: 64px;
-  background: url("apps.png") 64px 410px;
+  background: url("images/apps.png") 64px 410px;
 }
 #photos {
   width: 64px;
   height: 64px;
-  background: url("apps.png") 64px 1030px;
+  background: url("images/apps.png") 64px 1030px;
 }
 
 #moreApps {
