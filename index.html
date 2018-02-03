@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+  <head>
+    <title>Google</title>
+    <meta charset="utf-8">
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <link rel="shortcut icon" href="index.ico" />
+  </head>
+  <body>
+    <div id="viewport">
+      <div id="nav">
+        <ul id="leftNav">
+          <li><a href="">About</a></li>
+          <li><a href="">Store</a></li>
+        </ul>
+        <ul id="rightNav">
+          <li><a href="">Gmail</a></li>
+          <li><a href="">Images</a></li>
+          <li><div id="otherApps"></li>
+          <li><div id="notifications"></div></li>
+          <li id="userLi"><div id="user"><p id="username">K</p></div></li>
+        </ul>
+        <div id="appsWindow">
+          <div id="appIcons">
+            <div class="app">
+              <div id="myAccImg" class="appImgCursor"></div>
+              <p class="appName">My Account</p>
+            </div>
+            <div class="app">
+              <div id="searchImg" class="appImgCursor"></div>
+              <p class="appName">Search</p>
+            </div>
+            <div class="app">
+              <div id="maps" class="appImgCursor"></div>
+              <p class="appName">Maps</p>
+            </div>
+            <div class="app">
+              <div id="youTube" class="appImgCursor"></div>
+              <p class="appName">YouTube</p>
+            </div>
+            <div class="app">
+              <div id="play" class="appImgCursor"></div>
+              <p class="appName">Play</p>
+            </div>
+            <div class="app">
+              <div id="gmail" class="appImgCursor"></div>
+              <p class="appName">Gmail</p>
+            </div>
+            <div class="app">
+              <div id="drive" class="appImgCursor"></div>
+              <p class="appName">Drive</p>
+            </div>
+            <div class="app">
+              <div id="calendar" class="appImgCursor"></div>
+              <p class="appName">Calendar</p>
+            </div>
+            <div class="app">
+              <div id="plus" class="appImgCursor"></div>
+              <p class="appName">Google+</p>
+            </div>
+            <div class="app">
+              <div id="translate" class="appImgCursor"></div>
+              <p class="appName">Translate</p>
+            </div>
+            <div class="app">
+              <div id="photos" class="appImgCursor"></div>
+              <p class="appName">Photos</p>
+            </div>
+          </div>
+          <div id="moreApps"><p class="appName">More</p></div>
+        </div>
+        <div id="nWindow">
+          <div id="notiNav">
+            <img id="gear" src="gear.png" />
+            <div id="gearText">Settings</div>
+            <img id="notiLogo" src="google.png" style="width: 90.6px; height: 30.3px;" />
+          </div>
+          <p id="caughtUp">All caught up!</p>
+          <div id="container">
+            <div id="notiMore">
+              <img id="arrow" src="arrow.png" />
+            </div>
+            <div id="extra">
+              <p id="extraText">View all notifications from</p>
+              <img id="notiPlus" src="plus.png">
+            </div>
+          </div>
+        </div>
+        <div id="userWindow">
+          <div id="userContainer">
+            <div id="infoContainer">
+              <div id="userIcon">
+                <p id="initial">K</p>
+
+              </div>
+                <div id="userInfoContainer">
+                <p id="username">Ken Rebane</p>
+                <p id="userEmail">rebaneken95@gmail.com</p>
+                <p id="linksContainer"><a id="link1" href="">Google+ Profile</a> - <a id="link2" href="">Privacy</a></p>
+                <button id="myAcc">My Account</button>
+              </div>
+            </div>
+            <div id="userExtra">
+              <button id="addAcc">Add account</button>
+              <button id="signOut">Sign Out</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="main">
+        <img id="gimg" src="google.png" />
+        <div id="inputContainer">
+          <input id="input" />
+          <img id="mic" src="mic.png" />
+          <p id="micText">Search by voice</p>
+        </div>
+        <div id="buttons">
+          <button id="search">Google search</button>
+          <button id="lucky">I'm feeling lucky</button>
+        </div>
+        <div id="offeredIn">
+          <p>Google offered in: <a href="">eesti</a> <a href="">русский</a></p>
+        </div>
+      </div>
+      <div id="footer">
+        <div id="lang">
+          <p>Estonia</p>
+        </div>
+        <div id="other">
+          <ul id="otherLeft">
+            <li><a href="">Advertising</a></li>
+            <li><a href="">Business</a></li>
+          </ul>
+          <ul id="otherRight">
+            <li><a href="">Privacy</a></li>
+            <li><a href="">Terms</a></li>
+            <li><a href="">Settings</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var input = document.getElementById("input"),
+          inputContainer = document.getElementById("inputContainer"),
+          main = document.getElementById("main"),
+          micBox = document.getElementById("micText"),
+          mic = document.getElementById("mic"),
+          appsWindow = document.getElementById("appsWindow"),
+          appsButton = document.getElementById("otherApps"),
+          appList = document.getElementsByClassName("app"),
+          nb = document.getElementById("notifications"),
+          nWindow = document.getElementById("nWindow"),
+          notiMore = document.getElementById("notiMore"),
+          extra = document.getElementById("extra"),
+          container = document.getElementById("container"),
+          gear = document.getElementById("gear"),
+          gearText = document.getElementById("gearText"),
+          notiNav = document.getElementById("notiNav"),
+          notiLogo = document.getElementById("notiLogo"),
+          caughtUp = document.getElementById("caughtUp"),
+          arrow = document.getElementById("arrow"),
+          notiPlus = document.getElementById("notiPlus"),
+          extraText = document.getElementById("extraText"),
+          user = document.getElementById("user"),
+          userWindow = document.getElementById("userWindow"),
+          userText = document.getElementById("username"),
+          userLi = document.getElementById("userLi");
+
+     function toggleWindow (e) {
+       var element = e.target;
+       if ( element.id === "username" ||
+            element.id === "user" ||
+            element.id === "userLi") {
+              var style = window.getComputedStyle(userWindow);
+              var display = style.getPropertyValue("display");
+              if ( display === "none") {
+                userWindow.style.display = "block";
+              } else {
+                userWindow.style.display = "none";
+              }
+            }
+     }
+
+     user.onclick = function (e) {
+       toggleWindow(e);
+     }
+     gear.onmouseout = function () {
+       gearText.style.display = "none";
+     }
+     gear.onmouseenter = function () {
+       gearText.style.display = "block";
+     }
+
+     container.onmouseover = function () {
+       extra.style.height = "54px";
+       extra.style.paddingBottom = "10px";
+     }
+     container.onmouseout = function () {
+       extra.style.height = "0px";
+       extra.style.paddingBottom = "0px";
+     }
+
+      nb.onclick = function () {
+        nWindow.style.display = "flex";
+      }
+
+      inputContainer.onmouseenter = function () {
+        inputContainer.style.boxShadow = "0px 12px 53px -20px rgba(0,0,0,1)";
+      }
+
+      inputContainer.onmouseleave = function () {
+        if ( !(document.activeElement === input) ) {
+          inputContainer.style.boxShadow = "-1px 12px 30px -20px rgba(0,0,0,0.75)";
+        }
+      }
+
+      input.onclick = function() {
+        if ( document.activeElement === input ) {
+          inputContainer.style.boxShadow = "0px 12px 53px -20px rgba(0,0,0,1)";
+        }
+      }
+
+      function hasParentApps (element) {
+
+        if (element.id || element.className) {
+          if (element.id) {
+            var id = element.id;
+            var parentElem = document.getElementById(element.id).parentNode;
+            if ( parentElem.className === appList[1].className ||
+                 element.id === "appIcons" ||
+                 element.id === "moreApps" ) {
+              return true;
+            } else {
+              return false;
+            }
+          } else {
+            if ( element.className === "appName" ||
+                 element.className === "app" ) {
+              return true;
+            } else {
+              return false;
+            }
+          }
+        } else {
+          return false;
+        }
+      }
+
+      function appWindowOn(e) {
+        var target = e.target;
+        if ( !(target === appsButton) ) {
+          if ( !(target === appsWindow) ) {
+            if ( !( hasParentApps(target) ) ) {
+
+
+              appsWindow.style.display = "none";
+            }
+          }
+        }
+      }
+
+      function hasWindowIds(element) {
+        if ( !(element.id === "gear" ||
+               element.id === "caughtUp" ||
+               element.id === "notiLogo" ||
+               element.id === "gearText" ||
+               element.id === "notiNav" ||
+               element.id === "arrow" ||
+               element.id === "notiPlus" ||
+               element.id === "container" ||
+               element.id === "notiMore" ||
+               element.id === "extra" ||
+               element.id === "extraText") ) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      function notificationsWindow (e) {
+        var target = e.target;
+        if ( !(target === nb) ) {
+          if ( !(target === nWindow) ) {
+            if ( hasWindowIds(target) ) {
+
+            nWindow.style.display = "none";
+           }
+          }
+        }
+      }
+
+      function hasUserIds (element) {
+        if ( !(element.id === "userContainer" ||
+               element.id === "infoContainer" ||
+               element.id === "userIcon" ||
+               element.id === "initial" ||
+               element.id === "username" ||
+               element.id === "userEmail" ||
+               element.id === "linksContainer" ||
+               element.id === "link1" ||
+               element.id === "link2" ||
+               element.id === "userInfoContainer" ||
+               element.id === "myAcc" ||
+               element.id === "userExtra" ||
+               element.id === "addAcc" ||
+               element.id === "signOut") ) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      function userWindowOn (e) {
+        var target = e.target;
+        if ( !(target === user ||
+               target === userText ||
+               target === userLi) ) {
+                 if ( !(target === userWindow) ) {
+                   if ( hasUserIds(target) ) {
+                     userWindow.style.display = "none";
+                   }
+                 }
+               }
+      }
+      document.onclick = function(e) {
+        if ( !(document.activeElement === input) ) {
+          inputContainer.style.boxShadow = "-1px 12px 30px -20px rgba(0,0,0,0.75)";
+        }
+
+
+
+        var e = e || window.event;
+        appWindowOn(e);
+        notificationsWindow(e);
+        userWindowOn(e);
+      }
+
+      mic.onmouseover = function() {
+        micBox.style.display = "block";
+      }
+
+      mic.onmouseout = function () {
+        micBox.style.display = "none";
+      }
+
+      appsButton.onclick = function () {
+        appsWindow.style.display = "block";
+      }
+
+
+
+    </script>
+  </body>
+</html>

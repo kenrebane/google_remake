@@ -1,0 +1,515 @@
+* {
+  font-family: arial, sans-serif;
+  font-size: 13px;
+  color: black;
+}
+ul {
+  list-style-type: none;
+}
+html, body {
+  margin: 0px;
+  padding: 0px;
+}
+
+#notifications {
+  height: 30px;
+  width: 30px;
+  position: relative;
+  top: -2px;
+  background: url("icons.png") 139px 68px;
+  opacity: 0.5;
+}
+#notifications:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+#otherApps {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: 0px;
+  background: url('icons.png') 397px 98px;
+  opacity: 0.5;
+}
+#otherApps:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+#appsWindow {
+  width: 360px;
+  height: 500px;
+  border: 1px solid gainsboro;
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 990px;
+  box-shadow: 0px 0px 17px -6px rgba(0,0,0,0.75);
+
+}
+#appIcons {
+  margin: 30px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+.app {
+  width: 64px;
+  height: 76px;
+  padding: 10px;
+  margin: 3px 1px;
+  border: 1px solid #fff;
+}
+.app:hover {
+  border: 1px solid gainsboro;
+}
+.app > p {
+  margin: 0px;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+}
+.appImgCursor {
+  cursor: pointer;
+}
+#myAccImg {
+  width: 64px;
+  height: 64px;
+  background: url("apps.png") 64px 1995px;
+}
+#searchImg {
+  width: 64px;
+  height: 64px;
+  background: url("apps.png") 64px 1857px;
+}
+#maps {
+  width: 64px;
+  height: 64px;
+  background: url("apps.png") 64px 755px;
+}
+#youTube {
+  width: 64px;
+  height: 64px;
+  background: url("apps.png") 64px 205px;
+}
+#play {
+  width: 64px;
+  height: 64px;
+  background: url("apps.png") 64px 64px;
+}
+#gmail {
+  width: 64px;
+  height: 64px;
+  background: url("apps.png") 64px 2135px;
+}
+#drive {
+  width: 64px;
+  height: 64px;
+  background: url("apps.png") 64px 478px;
+}
+#calendar {
+  width: 64px;
+  height: 64px;
+  background: url("apps.png") 64px 1720px;
+}
+#plus {
+  width: 64px;
+  height: 64px;
+  background: url("apps.png") 64px 1930px;
+}
+#translate {
+  width: 64px;
+  height: 64px;
+  background: url("apps.png") 64px 410px;
+}
+#photos {
+  width: 64px;
+  height: 64px;
+  background: url("apps.png") 64px 1030px;
+}
+
+#moreApps {
+  margin-top: -16px;
+  height: 40px;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+#moreApps > p {
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+#nWindow {
+  position: absolute;
+  left: 1000px;
+  top: 60px;
+  width: 350px;
+  height: 300px;
+  background-color: #eee;
+  box-shadow: 0px 0px 17px -6px rgba(0,0,0,0.75);
+  border: 1px solid gainsboro;
+  display: none;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+#notiNav {
+  margin-top: 10px;
+}
+#gear {
+  opacity: 0.5;
+  float: left;
+  z-index: 1;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+#gear:hover {
+  opacity: 1;
+}
+#gearText {
+  width: 50px;
+  height: 15px;
+  font-weight: bold;
+  padding: 7px;
+  background-color: #333;
+  border-radius: 2px;
+  color: white;
+  display: none;
+  position: absolute;
+  left: 30px;
+  top: 40px;
+}
+#container {
+  width: 100%;
+  background-color:
+  background-color: #F5F5F5;
+}
+#notiMore {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #F5F5F5;
+  box-shadow: 0px -18px 19px -24px rgba(56,56,56,1);
+  cursor: pointer;
+}
+#extra {
+  width: 100%;
+  height: 0px;
+  transition: height 500ms;
+  padding-bottom: 0px;
+  transition: padding-bottom 500ms;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #F5F5F5;
+}
+#extra > p {
+  margin-bottom: 2px;
+  overflow: hidden;
+}
+#notiPlus {
+  opacity: 0.8;
+  overflow: hidden;
+}
+#notiPlus:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+#caughtUp {
+  color: #B8B8B8;
+}
+
+
+#user {
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  background-color: tomato;
+  position: relative;
+  top: -8px;
+  opacity: 0.8;
+  text-align: center;
+  vertical-align: center;
+}
+#user:hover {
+  opacity: 1;
+}
+#user > p {
+  font-size: 18px;
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  padding-top: 7px;
+}
+#user > p:hover {
+  cursor: pointer;
+}
+
+#userWindow {
+  width: 325px;
+  height: 200px;
+  position: absolute;
+  display: none;
+  left: 1000px;
+  top: 60px;
+  border: 1px solid gainsboro;
+  box-shadow: 0px 0px 17px -6px rgba(0,0,0,0.75);
+}
+
+#infoContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+#userIcon {
+  width: 96px;
+  height: 96px;
+  border-radius: 96px;
+  margin-left: 20px;
+  margin-top: 20px;
+  border: 1px solid gainsboro;
+  background-color: tomato;
+}
+#initial {
+  color: white;
+  font-size: 48px;
+  margin: 0px;
+  position: absolute;
+  top: 45px;
+  left: 54px;
+}
+
+#userInfoContainer {
+  margin-right: 30px;
+  padding-left: 15px;
+}
+#userInfoContainer > button {
+  width: 120px;
+  height: 30px;
+  background-color: #357ae8;
+  color: white;
+}
+#username {
+  margin-bottom: 2px;
+  font-weight: bold;
+}
+#userEmail {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+#myAcc {
+  margin: 0px;
+  padding: 0px;
+}
+#myAcc:hover {
+  background-color: #2253E0;
+}
+#linksContainer {
+  margin-top: 5px;
+}
+#linksContainer > a {
+  color: blue;
+  text-decoration: none;
+}
+#linksContainer > a:hover {
+  text-decoration: underline;
+}
+#userExtra {
+  border-top: 1px solid gainsboro;
+  height: 59px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FAFAFA;
+}
+#userExtra > button {
+  font-weight: lighter;
+  color: #707070;
+}
+#addAcc {
+  margin-left: 20px;
+}
+#signOut {
+  margin-right: 20px;
+}
+#userExtra > button {
+  width: 100px;
+  height: 32px;
+}
+#nav > ul > li > a {
+  position: relative;
+  top: -9px;
+  text-decoration: none;
+  line-height: 24px;
+  font-size: 13px;
+  padding-left: 15px;
+}
+#nav > ul > li > a:hover {
+  text-decoration: underline;
+}
+
+#nav > ul > li {
+  display: inline-block;
+  margin-left: 15px;
+}
+#nav > ul {
+  display: inline-block;
+}
+#nav > #rightNav {
+  float: right;
+  margin: 0px;
+  height: 30px;
+  padding-right: 20px;
+}
+#nav {
+  margin-top: 15px;
+  height: 30px;
+}
+#nav > #leftNav  {
+  margin: 0px;
+  padding-left: 10px;
+}
+#nav > #leftNav > li > a {
+  position: relative;
+  top: 5px;
+}
+
+#main {
+  width: 584px;
+  margin: auto;
+  margin-top: 90px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+  justify-content: center;
+}
+#inputContainer {
+  width: 590px;
+  height: 44px;
+  border: 0.5px solid #eee;
+  margin-bottom: 30px;
+  box-shadow: -1px 12px 30px -20px rgba(0,0,0,0.75);
+  -webkit-transition: box-shadow 300ms;
+}
+#inputContainer:hover {
+  box-shadow: 0px 12px 53px -20px rgba(0,0,0,1);
+}
+
+#mic {
+  position: relative;
+  top: 3px;
+  opacity: 0.8;
+}
+#mic:hover {
+  opacity: 1;
+}
+#micText {
+  position: absolute;
+  top: 350px;
+  left: 900px;
+  padding: 5px;
+  background-color: #333;
+  display: inline-block;
+  border: none;
+  color: white;
+  font-weight: bold;
+  display: none;
+}
+
+#input {
+  width: 544px;
+  height: 34px;
+  padding: 0px;
+  margin: 0px;
+  margin-top: 7px;
+  border: none;
+  margin-left: 10px;
+  font-size: 16px;
+}
+#input:focus {
+  outline: none;
+}
+#gimg {
+  padding-top: 63px;
+  margin: auto;
+  padding-bottom: 25px;
+}
+#buttons {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+button {
+  width: 120px;
+  margin: 5px;
+  height: 37px;
+  border: none;
+
+  font-weight: bold;
+  color: #333;
+  border-radius: 2px;
+  background-color: #eee;
+}
+button:hover {
+  background-color: gainsboro;
+  border: 1px solid beige;
+  cursor: pointer;
+}
+#offeredIn {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+#lang {
+  height: 41px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  background-color: #eee;
+  border: 1px solid gainsboro;
+  border-bottom: none;
+}
+#lang > p {
+  margin: 0px;
+  padding-left: 40px;
+  font-size: 18px;
+}
+#footer {
+  margin-top: 108px;
+}
+#other {
+  background-color: #eee;
+  border: 1px solid gainsboro;
+  height: 41px;
+}
+#other > ul {
+  display: inline-block;
+}
+#other > ul > li {
+  display: inline-block;
+}
+#other > ul > li > a {
+  text-decoration: none;
+}
+#other > ul > li > a:hover {
+  text-decoration: underline;
+}
+#otherRight {
+  float: right;
+  margin-right: 40px;
+}
